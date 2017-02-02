@@ -28,6 +28,10 @@
                 </execution>
             </executions>
         </plugin>
+
+        <!-- Runnable jar plugins below this point -->
+
+        <!-- fat (jar containing dependencies) jar -->
         <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <configuration>
@@ -36,7 +40,6 @@
                 </descriptorRefs>
                 <archive>
                     <manifest>
-                        <!-- put the name of your main class here -->
                         <mainClass>${mainClass}</mainClass>
                     </manifest>
                 </archive>
@@ -50,6 +53,8 @@
                 </execution>
             </executions>
         </plugin>
+
+        <!-- thin (no dependencies included) jar -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
