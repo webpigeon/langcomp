@@ -7,7 +7,7 @@ test @ 3 = if 4 then
 -- should have no effect
 
 -- if test == 5: return 3 else return 2
-test @ 5 = if 3 then 2 else
+test @ 5 = if 3 else 2 then
 . 
 -- should be 3
 
